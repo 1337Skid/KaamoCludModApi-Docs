@@ -1,4 +1,4 @@
-# Hooks
+# HookFunction
 
 Hooks let you override the behavior of a function entirely
 

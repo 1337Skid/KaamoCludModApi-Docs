@@ -2,27 +2,36 @@
 
 events are fired when the action is triggered
 
-## IsInGame
-Fires when the player is in a save
-!!! warning "Warning"
+## RegisterEvent
+Registers a new event
 
-    This event isn't async, wait() does not work here
+!!! info "Args"
+    It depends of the event
+```lua
+RegisterEvent(eventname, function(args)
+    print("Hi event!")
+end)
+```
+
+---
+
+## Events list
+
+### IsInGame
+Fires when the player is in a save
 ```lua
 RegisterEvent("IsInGame", function()
 	print("Joined")
 end)
 ```
-## OnJoinGame
+### OnJoinGame
 Fires when the player loads a save
-!!! warning "Warning"
-
-    This event isn't async, wait() does not work here
 ```lua
 RegisterEvent("OnJoinGame", function()
 	print("Joined")
 end)
 ```
-## OnAsteroidDestroyed
+### OnAsteroidDestroyed
 Fires when the player destroy an asteroid
 !!! info "Args"
 
@@ -33,7 +42,7 @@ RegisterEvent("OnAsteroidDestroyed", function(count)
 	print("Asteroids destroyed : " .. count)
 end)
 ```
-## OnEnemieKilled
+### OnEnemieKilled
 Fires when an enemie has been killed by the player
 !!! info "Args"
 
@@ -44,7 +53,7 @@ RegisterEvent("OnEnemieKilled", function(count)
 	print("Enemies killed : " .. count)
 end)
 ```
-## OnCargoChanged
+### OnCargoChanged
 Fires when the player cargo changed
 !!! info "Args"
 
@@ -55,7 +64,7 @@ RegisterEvent("OnCargoChanged", function(count)
 	print("Current cargo : " .. count)
 end)
 ```
-## OnStationChanged
+### OnStationChanged
 Fires when the player travels to a different station
 !!! info "Args"
 
@@ -66,7 +75,7 @@ RegisterEvent("OnStationChanged", function(id)
 	print("Station id is " .. id)
 end)
 ```
-## OnStationDocked
+### OnStationDocked
 Fires when the player docked in a station
 ```lua
 RegisterEvent("OnStationDocked", function()
@@ -74,21 +83,15 @@ RegisterEvent("OnStationDocked", function()
 	print("You docked in this station " .. station.name)
 end)
 ```
-## IsInMainMenu
+### IsInMainMenu
 Fires when the player is in the main menu
-!!! warning "Warning"
-
-    This event isn't async, wait() does not work here
 ```lua
 RegisterEvent("IsInMainMenu", function()
 	print("Main menu")
 end)
 ```
-## OnMoneyChanged
+### OnMoneyChanged
 Fires when the player money changed
-!!! warning "Warning"
-
-    This event isn't async, wait() does not work here
 !!! info "Args"
 
     `money` returns the current player money
@@ -97,7 +100,7 @@ RegisterEvent("OnMoneyChanged", function(money)
 	print("Current money : " .. money)
 end)
 ```
-## OnSystemChanged
+### OnSystemChanged
 Fires when the player travels to a different system
 !!! info "Args"
 
@@ -108,17 +111,14 @@ RegisterEvent("OnSystemChanged", function(id)
 	print("System id : " .. id)
 end)
 ```
-## OnUpdate
+### OnUpdate
 Fires every ticks
-!!! warning "Warning"
-
-    This event isn't async, wait() does not work here
 ```lua
 RegisterEvent("OnUpdate", function()
 	print("Update!")
 end)
 ```
-## EarlyInit
+### EarlyInit
 !!! warning "Warning"
 
     This event isn't async, wait() does not work here
