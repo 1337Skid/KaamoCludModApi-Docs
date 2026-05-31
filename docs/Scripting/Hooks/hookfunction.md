@@ -17,6 +17,10 @@ HookFunction("Level::createCampaignMission", function(ctx)
 	ctx:call() -- calling real function (you can remove the ctx:call() if you want to override the hooked function entirely)
 end)
 ```
+
+---
+
+
 ## Level::createMission
 This function is triggered when we join a station without any missions, it can be really misleading due to of the function name being "createMission"
 !!! info "Args"
@@ -28,6 +32,10 @@ HookFunction("Level::createMission", function(ctx)
 	ctx:call() -- calling real function (you can remove the ctx:call() if you want to override the hooked function entirely)
 end)
 ```
+
+---
+
+
 ## Globals::init
 This function is triggered when we start the game, this is really different from the EarlyInit function because EarlyInit is the modding api init and Globals::init is the game init
 !!! info "Args"

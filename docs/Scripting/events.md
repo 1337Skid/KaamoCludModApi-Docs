@@ -24,6 +24,10 @@ RegisterEvent("IsInGame", function()
 	print("Joined")
 end)
 ```
+
+---
+
+
 ### OnJoinGame
 Fires when the player loads a save
 ```lua
@@ -31,6 +35,10 @@ RegisterEvent("OnJoinGame", function()
 	print("Joined")
 end)
 ```
+
+---
+
+
 ### OnAsteroidDestroyed
 Fires when the player destroy an asteroid
 !!! info "Args"
@@ -42,6 +50,10 @@ RegisterEvent("OnAsteroidDestroyed", function(count)
 	print("Asteroids destroyed : " .. count)
 end)
 ```
+
+---
+
+
 ### OnEnemieKilled
 Fires when an enemie has been killed by the player
 !!! info "Args"
@@ -53,6 +65,10 @@ RegisterEvent("OnEnemieKilled", function(count)
 	print("Enemies killed : " .. count)
 end)
 ```
+
+---
+
+
 ### OnCargoChanged
 Fires when the player cargo changed
 !!! info "Args"
@@ -64,6 +80,10 @@ RegisterEvent("OnCargoChanged", function(count)
 	print("Current cargo : " .. count)
 end)
 ```
+
+---
+
+
 ### OnStationChanged
 Fires when the player travels to a different station
 !!! info "Args"
@@ -75,6 +95,10 @@ RegisterEvent("OnStationChanged", function(id)
 	print("Station id is " .. id)
 end)
 ```
+
+---
+
+
 ### OnStationDocked
 Fires when the player docked in a station
 ```lua
@@ -83,6 +107,10 @@ RegisterEvent("OnStationDocked", function()
 	print("You docked in this station " .. station.name)
 end)
 ```
+
+---
+
+
 ### IsInMainMenu
 Fires when the player is in the main menu
 ```lua
@@ -90,6 +118,10 @@ RegisterEvent("IsInMainMenu", function()
 	print("Main menu")
 end)
 ```
+
+---
+
+
 ### OnMoneyChanged
 Fires when the player money changed
 !!! info "Args"
@@ -100,6 +132,10 @@ RegisterEvent("OnMoneyChanged", function(money)
 	print("Current money : " .. money)
 end)
 ```
+
+---
+
+
 ### OnSystemChanged
 Fires when the player travels to a different system
 !!! info "Args"
@@ -111,6 +147,10 @@ RegisterEvent("OnSystemChanged", function(id)
 	print("System id : " .. id)
 end)
 ```
+
+---
+
+
 ### OnUpdate
 Fires every ticks
 ```lua
@@ -118,6 +158,11 @@ RegisterEvent("OnUpdate", function()
 	print("Update!")
 end)
 ```
+
+
+---
+
+
 ### EarlyInit
 !!! warning "Warning"
 

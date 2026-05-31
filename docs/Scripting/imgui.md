@@ -180,3 +180,32 @@ Adds a blank line of vertical spacing
 ```lua
 imgui:Spacing()
 ```
+
+---
+
+## Frame
+
+### SetWindowOpen
+Displays the ImGui window
+
+!!! info "Args"
+    - `title` - The window title
+    - `isopen` - Visible state of the window
+
+```lua
+imgui:SetWindowOpen("My mod menu", false) -- hide the window
+```
+
+---
+
+### IsWindowOpen
+Returns true if the ImGui window is open
+
+!!! info "Args"
+    - `title` - The window title
+
+```lua
+if imgui:IsWindowOpen("My mod menu") then
+    print("Yes the window is open!")
+end
+```
